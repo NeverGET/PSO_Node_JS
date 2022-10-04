@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b12fecd-7eaf-4c81-9f1c-a6ad5a2b447a" name="Changes" comment="Add Library">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7b12fecd-7eaf-4c81-9f1c-a6ad5a2b447a" name="Changes" comment="Bug fixing and performance update.">
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/pso/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/pso/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +50,7 @@
       <option name="presentableId" value="Default" />
       <updated>1664898852626</updated>
       <workItem from="1664898853925" duration="312000" />
-      <workItem from="1664901053493" duration="3435000" />
+      <workItem from="1664901053493" duration="3579000" />
     </task>
     <task id="LOCAL-00001" summary="Add Library">
       <created>1664901155781</created>
@@ -70,7 +66,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664901167445</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Bug fixing and performance update.">
+      <created>1664905230086</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664905230086</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -89,14 +92,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add Library" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Library" />
+    <MESSAGE value="Bug fixing and performance update." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixing and performance update." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/main.js</url>
-          <line>17</line>
+          <line>22</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
         </line-breakpoint>

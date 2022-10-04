@@ -3,27 +3,27 @@ const ParticleSwarmOptimization = require("pso");
 // arrayify is transform stream that turns two input streams
 // into one stream by wraping packets of inputs in array.
 // So trainingSet outputs arrays [<feature>, <label>]
-var canvas = document.createElement('canvas')
+const canvas = document.createElement('canvas');
 document.body.appendChild(canvas)
 
 canvas.width = window.screen.width
 canvas.height = window.screen.height
-var swarm_size = 500;
-var range_w = canvas.width;
-var range_h = canvas.height;
-var target_w = (Math.random() * range_w - range_w/2);
-var target_h = (Math.random() * range_h - range_h/2);
+const swarm_size = 500;
+const range_w = canvas.width;
+const range_h = canvas.height;
+let result;
+const target_w = (Math.random() * range_w - range_w / 2);
+const target_h = (Math.random() * range_h - range_h / 2);
 particles = Array.from({length: swarm_size}, () => [(Math.floor((Math.random() * 125)+125)), (Math.floor((Math.random() * 256))), (Math.floor((Math.random() * 125)+125))]);
-var swarm = Array.from({length: swarm_size}, () => [(Math.floor((Math.random() * range_w) - range_w/2)), (Math.floor((Math.random() * range_h) - range_h/2))]);
-var PSO = new ParticleSwarmOptimization(swarm, 0.1, 0.05, 0.85, 100000, 1, undefined,
+const swarm = Array.from({length: swarm_size}, () => [(Math.floor((Math.random() * range_w) - range_w / 2)), (Math.floor((Math.random() * range_h) - range_h / 2))]);
+let PSO = new ParticleSwarmOptimization(swarm, 0.1, 0.05, 0.85, 100000, 1, undefined,
     (value, index, array, args) => {
-        let x = (value[0] + target_w)**2 + (value[1] + target_h)**2;
-        return 1/(1 + Math.abs(x - 17)**4);
+        let x = (value[0] + target_w) ** 2 + (value[1] + target_h) ** 2;
+        return 1 / (1 + Math.abs(x - 17) ** 4);
     });
-PSO.iteration();
-let k = PSO.gBest;
+PSO.iteration().then(r => result);
 
-var context = canvas.getContext('2d')
+const context = canvas.getContext('2d');
 
 //context.fillStyle = 'red'
 //context.fillRect(0, 0, 100, 100)
@@ -31,9 +31,8 @@ var context = canvas.getContext('2d')
 // context.fillStyle = 'green'
 // context.fillRect(200, 0, 100, 100)
 
-var x = 0
-var y = 0
-var counter = 0;
+let x = 0;
+let y = 0;
 window.requestAnimationFrame(function loop() {
     x += .2
     y += .5
