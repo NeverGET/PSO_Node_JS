@@ -2,6 +2,7 @@
   "name": "PSO_Node_JS",
   "version": "1.0.0",
   "dependencies": {
-    
+    "budo": "^11.8.4",
+    "canvas": "^2.10.1"
   }
 }
