@@ -1,8 +1,13 @@
 {
   "name": "PSO_Node_JS",
   "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "budo main.js --live"
+  },
   "dependencies": {
     "budo": "^11.8.4",
-    "canvas": "^2.10.1"
+    "canvas": "^2.10.1",
+    "pso": "^1.0.0"
   }
 }
