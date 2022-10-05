@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PSO_Node_JS.iml" filepath="$PROJECT_DIR$/PSO_Node_JS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/linear_regression.iml" filepath="$PROJECT_DIR$/linear_regression.iml" />
     </modules>
   </component>
 </project>

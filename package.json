@@ -8,6 +8,7 @@
   "dependencies": {
     "budo": "^11.8.4",
     "canvas": "^2.10.1",
-    "pso": "^1.0.0"
+    "pso": "^1.0.0",
+    "linear_regression": "^1.0.0"
   }
 }

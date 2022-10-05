@@ -12,13 +12,14 @@ const swarm_size = 500;
 const range_w = canvas.width;
 const range_h = canvas.height;
 let result;
+require("linear_regression");
 const target_w = (Math.random() * range_w - range_w / 2);
 const target_h = (Math.random() * range_h - range_h / 2);
 particles = Array.from({length: swarm_size}, () => [(Math.floor((Math.random() * 125)+125)), (Math.floor((Math.random() * 256))), (Math.floor((Math.random() * 125)+125))]);
 const swarm = Array.from({length: swarm_size}, () => [(Math.floor((Math.random() * range_w) - range_w / 2)), (Math.floor((Math.random() * range_h) - range_h / 2))]);
-let PSO = new ParticleSwarmOptimization(swarm, 0.1, 0.05, 0.85, 100000, 1, undefined,
+let PSO = new ParticleSwarmOptimization(swarm, 0.3, 0.01, 0.95, 100000, 1, undefined,
     (value, index, array, args) => {
-        let x = (value[0] + target_w) ** 2 + (value[1] + target_h) ** 2;
+        let x = (value[0] + target_w/2) ** 2 + (value[1] + target_h/2) ** 2;
         return 1 / (1 + Math.abs(x - 17) ** 4);
     });
 PSO.iteration().then(r => result);
